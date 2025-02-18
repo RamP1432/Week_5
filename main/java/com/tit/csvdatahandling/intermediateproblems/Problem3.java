@@ -10,24 +10,35 @@ import java.util.ArrayList;
 
 public class Problem3 {
     public static void main(String[] args) {
-        String filePath="C:\\Users\\patha\\OneDrive\\Desktop\\Week5_Day1\\src\\main\\resources\\CSV1.txt";
-        ArrayList<String []> updatedDate=new ArrayList<>();
-        try(CSVReader reader=new CSVReader(new FileReader(filePath))){
-            String []line;
-            updatedDate.add(reader.readNext());
-            while((line=reader.readNext())!=null){
-                if(line[2].equalsIgnoreCase("IT")){
-                    line[3]=Double.toString(Math.floor(Double.parseDouble(line[3])*1.1));
+        // Specify the path to the CSV file
+        String filePath = "C:\\Users\\patha\\OneDrive\\Desktop\\Week5_Day1\\src\\main\\resources\\CSV1.txt";
+        // List to store updated records
+        ArrayList<String[]> updatedData = new ArrayList<>();
+
+        // Read the CSV file
+        try (CSVReader reader = new CSVReader(new FileReader(filePath))) {
+            String[] line;
+            // Read and add the header row
+            updatedData.add(reader.readNext());
+            while ((line = reader.readNext()) != null) {
+                // Check if the department is "IT"
+                if (line[2].equalsIgnoreCase("IT")) {
+                    // Increase the salary by 10% and round it down to the nearest integer
+                    line[3] = Double.toString(Math.floor(Double.parseDouble(line[3]) * 1.1));
                 }
-                updatedDate.add(line);
+                // Add the updated line to the list
+                updatedData.add(line);
             }
-            System.out.println(updatedDate);
-        } catch (IOException io){
+        } catch (IOException io) {
+            // Handle any IO exceptions that occur
             System.out.println(io.getMessage());
         }
-        try(CSVWriter writer=new CSVWriter(new FileWriter(filePath))){
-            writer.writeAll(updatedDate);
-        } catch (IOException io){
+
+        // Write the updated records back to the same CSV file
+        try (CSVWriter writer = new CSVWriter(new FileWriter(filePath))) {
+            writer.writeAll(updatedData);
+        } catch (IOException io) {
+            // Handle any IO exceptions that occur
             System.out.println(io.getMessage());
         }
     }
