@@ -35,6 +35,7 @@ public class Problem3 {
             String email = object.getString("email");
             System.out.println("Name: " + name);
             System.out.println("Email: " + email);
+            System.out.println("-------------------------------------------");
         }
     }
 }
