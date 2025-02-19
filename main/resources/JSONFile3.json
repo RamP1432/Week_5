@@ -1,0 +1,16 @@
+[
+{
+  "name": "Abhishek Kumar",
+  "age": 30,
+  "phone_number": "8569785412",
+  "salary": 50000,
+  "email": "abhishek123@gmail.com"
+},
+  {
+    "name": "Anish Kumar",
+    "age": 30,
+    "phone_number": "8569785412",
+    "salary": 50000,
+    "email": "anish_kumar_123@gmail.com"
+  }
+]
