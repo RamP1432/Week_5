@@ -1,0 +1,36 @@
+
+[
+  {
+    "Name: ": "Sahil",
+    "Subjects": [
+      "Math",
+      "Science",
+      "Computer",
+      "English",
+      "Hindi"
+    ],
+    "Age": 22
+  },
+  {
+    "Name: ": "Rahul",
+    "Subjects": [
+      "Math",
+      "Science",
+      "Computer",
+      "English",
+      "Hindi"
+    ],
+    "Age": 26
+  },
+  {
+    "Name: ": "Yashika",
+    "Subjects": [
+      "Math",
+      "Science",
+      "Computer",
+      "English",
+      "Hindi"
+    ],
+    "Age": 27
+  }
+]
